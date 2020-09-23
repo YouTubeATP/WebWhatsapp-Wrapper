@@ -19,7 +19,6 @@ from axolotl.kdf.hkdfv3 import HKDFv3
 from axolotl.util.byteutil import ByteUtil
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from resizeimage import resizeimage
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
@@ -73,7 +72,7 @@ class WhatsAPIDriver(object):
 
     _SELECTORS = {
         "firstrun": "#wrapper",
-        "qrCode": "canvas",
+        "qrCode": """canvas[aria-label=\"Scan me!\"]""",
         "qrCodePlain": "div[data-ref]",
         "mainPage": ".two",
         "chatList": ".infinite-list-viewport",
