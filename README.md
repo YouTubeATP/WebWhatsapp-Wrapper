@@ -76,7 +76,8 @@ See sample directory for more complex usage examples.
 
 ### 2. Instantiate driver and set username
 
-    driver = WhatsAPIDriver(username="mkhase")
+    driver = WhatsAPIDriver(username="YouTubeATP", autoconnect=False) ## Intialize webdriver ourself as API's is not working
+    driver.driver.get(driver._URL)
 
 Possible arguments for constructor:
 
