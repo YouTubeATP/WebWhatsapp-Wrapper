@@ -72,7 +72,7 @@ class WhatsAPIDriver(object):
 
     _SELECTORS = {
         "firstrun": "#wrapper",
-        "qrCode": """canvas[aria-label=\"Scan me!\"]""",
+        "qrCode": """#app > div > div > div.landing-window > div.landing-main > div > div._2nIZM > div > canvas""",
         "qrCodePlain": "div[data-ref]",
         "mainPage": ".two",
         "chatList": ".infinite-list-viewport",
